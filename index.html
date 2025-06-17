@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📝 Generador de Informes PDF - EEST N°1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 Generador de Informes PDF</h1>
+            <p>EEST N°1 "Eduardo Ader" - Vicente López</p>
+        </div>
+
+        <div class="form-section">
+            <h2>📝 Datos del Estudiante</h2>
+            <form id="reportForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">👤 Nombre Completo:</label>
+                        <input type="text" id="name" required placeholder="Ingresa tu nombre completo" />
+                        <div class="error-message" id="nameError">El nombre solo puede contener letras y espacios</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">📧 Correo Electrónico:</label>
+                        <input type="email" id="email" required placeholder="ejemplo@gmail.com" />
+                        <div class="error-message" id="emailError">Ingresa un correo electrónico válido</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">🎂 Edad:</label>
+                        <input type="number" id="age" min="11" max="20" placeholder="17" />
+                        <div class="error-message" id="ageError">La edad debe estar entre 11 y 20 años</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">📚 Curso:</label>
+                        <select id="course">
+                            <option value="">Seleccionar curso</option>
+                            <option value="1° 1° División">1° 1° División</option>
+                            <option value="1° 2° División">1° 2° División</option>
+                            <option value="1° 3° División">1° 3° División</option>
+                            <option value="1° 4° División">1° 4° División</option>
+                            <option value="1° 5° División">1° 5° División</option>
+                            <option value="2° 1° División">2° 1° División</option>
+                            <option value="2° 2° División">2° 2° División</option>
+                            <option value="2° 3° División">2° 3° División</option>
+                            <option value="2° 4° División">2° 4° División</option>
+                            <option value="2° 5° División">2° 5° División</option>
+                            <option value="3° 1° División">3° 1° División</option>
+                            <option value="3° 2° División">3° 2° División</option>
+                            <option value="3° 3° División">3° 3° División</option>
+                            <option value="3° 4° División">3° 4° División</option>
+                            <option value="4° 1° División">4° 1° División</option>
+                            <option value="4° 2° División">4° 2° División</option>
+                            <option value="4° 3° División">4° 3° División</option>
+                            <option value="4° 4° División">4° 4° División</option>
+                            <option value="5° 1° División">5° 1° División</option>
+                            <option value="5° 2° División">5° 2° División</option>
+                            <option value="5° 3° División">5° 3° División</option>
+                            <option value="6° 1° División">6° 1° División</option>
+                            <option value="6° 2° División">6° 2° División</option>
+                            <option value="6° 3° División">6° 3° División</option>
+                            <option value="7° 1° División">7° 1° División</option>
+                            <option value="7° 2° División">7° 2° División</option>
+                        </select>
+                        <div class="error-message" id="courseError">Debes seleccionar un curso</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subject">📖 Materia:</label>
+                        <input type="text" id="subject" required placeholder="Ej: Proyecto de Implementación de Sitios Web Dinámicos" />
+                        <div class="error-message" id="subjectError">La materia es obligatoria</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">🆔 DNI:</label>
+                        <input type="text" id="dni" placeholder="12345678" maxlength="8" />
+                        <div class="error-message" id="dniError">El DNI debe tener exactamente 8 números</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="project">🚀 Proyecto Final:</label>
+                    <input type="text" id="project" required placeholder="Nombre de tu proyecto" />
+                    <div class="error-message" id="projectError">El proyecto final es obligatorio</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectDescription">📝 Descripción del Proyecto:</label>
+                    <textarea id="projectDescription" required placeholder="Describe brevemente tu proyecto final: tecnologías usadas, objetivos, funcionalidades principales, etc."></textarea>
+                    <div class="error-message" id="projectDescriptionError">La descripción del proyecto es obligatoria</div>
+                </div>
+
+                <button type="button" class="btn" onclick="generateReport()">
+                    🎯 Generar Informe PDF
+                </button>
+            </form>
+        </div>
+
+        <div class="preview-section">
+            <h2>👀 Vista Previa del PDF</h2>
+            <div id="reportContainer">
+                <div class="loading" style="display: none;">
+                    Generando PDF...
+                </div>
+                <p style="text-align: center; color: #666; padding: 40px;">
+                    📋 Completa el formulario y haz clic en "Generar Informe PDF" para ver la vista previa aquí.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de éxito -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-icon">✅</div>
+            <div class="modal-title">¡PDF Generado Exitosamente!</div>
+            <div class="modal-message">Tu informe ha sido creado correctamente y ya puedes verlo en la vista previa.</div>
+        </div>
+    </div>
+
+    <!-- Librería jsPDF desde CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
