@@ -15,36 +15,77 @@ Este proyecto consiste en el desarrollo de una mini aplicación web que permite 
 
 ## ⚙️ Funcionalidades
 
-- 🧾 **Formulario completo**: Captura datos como nombre, correo, edad, curso, materia, proyecto, descripción y DNI.
-- 📑 **Generación automática de PDF** con estructura visual clara, encabezado, secciones separadas y pie de página institucional.
-- 👁️ **Vista previa en vivo**: Visualización del PDF generado directamente en pantalla.
-- ✅ **Validación en tiempo real** de todos los campos del formulario con mensajes de error amigables.
-- 📤 **Botón de descarga** del PDF generado, nombrado automáticamente con el nombre del estudiante.
-- 📚 **Detección automática de Ciclo y Modalidad** según el curso elegido (Básico o Superior - Electrónica o Programación).
+- 🧾 **Formulario con campos: nombre, correo, edad, curso, materia, DNI, proyecto y descripción.
+- 📑 **Generación automática de un archivo PDF personalizado con diseño estructurado.
+- 👁️ **Vista previa inmediata del informe PDF generado, sin salir de la página.
+- ✅ **Validación en tiempo real de todos los campos con mensajes claros.
+- 📤 **Botón para descargar el PDF con nombre automático personalizado.
+- 📚 **Detección automática de ciclo (Básico/Superior) y modalidad (Programación/Electrónica) según el curso.
 
 ---
 
-## 🧪 Instrucciones para Probar el Proyecto
+## 🧪 Instrucciones para Probar el Proyecto del Generador de Informes PDF
 
-1. **Descargar el Proyecto desde GitHub**:
-   - Visita: https://github.com/Elmaciiiii/generador-informes
-   - Haz clic en el botón verde `Code` y selecciona `Download ZIP`.
-   - Extrae el archivo ZIP en tu computadora.
+Para probar la mini aplicación de generación de informes escolares en PDF, seguí estos pasos:
 
-2. **Abrir el Proyecto en Visual Studio Code**:
-   - Abre VS Code y selecciona "Archivo > Abrir Carpeta".
-   - Elige la carpeta extraída (`generador-informes-main`).
+---
 
-3. **Ejecutar el Proyecto con Live Server**:
-   - Asegúrate de tener instalada la extensión **Live Server** en VS Code.
-   - Abre el archivo `index.html`.
-   - Haz clic derecho sobre él y selecciona `Open with Live Server`.
+1. **Descargar el proyecto desde GitHub:**
+   * Ve a esta página: [https://github.com/Elmaciiiii/actividad_10_Soto-de-la-Colina.git](https://github.com/Elmaciiiii/actividad_10_Soto-de-la-Colina.git)
+   * Haz clic en el botón verde que dice **"Code"**.
+   * Elige la opción **"Download ZIP"** y guarda el archivo en tu computadora.
 
-4. **Completar el Formulario e Interactuar**:
-   - Ingresá los datos requeridos en cada campo del formulario.
-   - Presioná el botón **🎯 Generar Informe PDF**.
-   - Visualizá el resultado en la vista previa.
-   - Hacé clic en **📥 Descargar PDF** para obtener el archivo.
+---
+
+2. **Extraer el archivo ZIP:**
+   * Buscá el archivo ZIP que descargaste y hacé clic derecho para **extraer su contenido**.
+   * Se creará una carpeta llamada `actividad_10_Soto-de-la-Colina-main` o similar.
+
+---
+
+3. **Abrir la carpeta del proyecto en Visual Studio Code:**
+   * Abrí **Visual Studio Code**.
+   * En la barra de menú, andá a **"Archivo" (File)** y seleccioná **"Abrir Carpeta" (Open Folder)**.
+   * Navegá hasta la carpeta que se creó al extraer el ZIP (`actividad_10_Soto-de-la-Colina-main`) y seleccionala.
+   * Hacé clic en **"Seleccionar carpeta"** o **"Abrir"**.
+
+---
+
+4. **Abrir `index.html` con Live Server:**
+   * 📦 **Asegurate de tener instalada la extensión "Live Server" en Visual Studio Code.**
+     - Podés buscarla en la sección de extensiones (ícono con cuatro cuadrados) y hacer clic en **"Instalar"**.
+   * En el panel de archivos de Visual Studio Code (a la izquierda), **buscá y abrí el archivo `index.html`**.
+   * Hacé clic derecho dentro del archivo abierto y seleccioná **"Open with Live Server"**.
+   * La página del generador de informes se abrirá automáticamente en tu navegador.
+   * Cada vez que hagas un cambio en el código, Live Server actualizará la página.
+
+---
+
+5. **Interactuar con el generador de informes:**
+   * Completá todos los campos del formulario con tu información:
+     - Nombre completo
+     - Correo electrónico
+     - Edad
+     - Curso
+     - Materia
+     - DNI
+     - Proyecto Final
+     - Descripción del Proyecto
+   * Hacé clic en el botón **"🎯 Generar Informe PDF"**.
+   * Verás una **vista previa del PDF** en la misma página.
+   * Aparecerá un **modal de confirmación** indicando que el PDF se generó correctamente.
+   * Hacé clic en el botón **"📥 Descargar PDF"** para guardar tu informe en tu computadora.
+
+---
+
+✅ El informe incluirá:
+- Encabezado con nombre del colegio y fecha.
+- Datos personales y académicos.
+- Ciclo y modalidad deducidos automáticamente según el curso.
+- Descripción del proyecto con formato profesional.
+- Pie de página institucional.
+
+---
 
 ---
 
