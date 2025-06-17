@@ -15,12 +15,12 @@ Este proyecto consiste en el desarrollo de una mini aplicación web que permite 
 
 ## ⚙️ Funcionalidades
 
-- 🧾 **Formulario con campos: nombre, correo, edad, curso, materia, DNI, proyecto y descripción.
-- 📑 **Generación automática de un archivo PDF personalizado con diseño estructurado.
-- 👁️ **Vista previa inmediata del informe PDF generado, sin salir de la página.
-- ✅ **Validación en tiempo real de todos los campos con mensajes claros.
-- 📤 **Botón para descargar el PDF con nombre automático personalizado.
-- 📚 **Detección automática de ciclo (Básico/Superior) y modalidad (Programación/Electrónica) según el curso.
+- 🧾 Formulario con campos: nombre, correo, edad, curso, materia, DNI, proyecto y descripción.
+- 📑 Generación automática de un archivo PDF personalizado con diseño estructurado.
+- 👁️ Vista previa inmediata del informe PDF generado, sin salir de la página.
+- ✅ Validación en tiempo real de todos los campos con mensajes claros.
+- 📤 Botón para descargar el PDF con nombre automático personalizado.
+- 📚 Detección automática de ciclo (Básico/Superior) y modalidad (Programación/Electrónica) según el curso.
 
 ---
 
