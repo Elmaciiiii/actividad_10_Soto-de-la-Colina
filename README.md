@@ -49,4 +49,8 @@ Este proyecto consiste en el desarrollo de una mini aplicación web que permite 
 ---
 
 ## 🗂️ Estructura del Proyecto
-
+```plaintext
+.                   // Nombre que le pongas a la carpeta (por eso pongo un .)
+├── index.html      // Página principal con el formulario
+├── style.css       // Estilos visuales de la app
+├── script.js       // Lógica JS para validaciones y generación del PDF
